@@ -1,0 +1,123 @@
+:root { 
+    --suza-navy: #0f172a;        
+    --suza-gold: #d97706;        
+    --suza-gold-hover: #b45309; 
+    --bg-light: #f1f5f9; 
+    --surface-card: #ffffff; 
+    --text-dark: #1e293b; 
+    --text-muted: #64748b; 
+    --border-line: #cbd5e1; 
+    --shadow-card: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.03); 
+    --shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); 
+    --transition-smooth: all 0.25s cubic-bezier(0.4, 0, 0.2, 1); 
+    --font-base: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
+} 
+ 
+* {     box-sizing: border-box;     margin: 0;     padding: 0; 
+} 
+body {     background-color: var(--bg-light);     color: var(--text-dark);     font-family: var(--font-base);     line-height: 1.6;     padding: 2rem 1rem; 
+} 
+ 
+.catalogue-header {     text-align: center;     margin-bottom: 3rem;     border-bottom: 3px solid var(--suza-gold);     padding-bottom: 1.5rem; 
+} 
+ 
+.catalogue-header h1 {     color: var(--suza-navy);     font-size: 2.25rem;     font-weight: 800;     letter-spacing: -0.025em; 
+} 
+ 
+.catalogue-header p {     color: var(--text-muted);     font-weight: 500;     margin-top: 0.25rem; 
+}
+.catalogue-container {     max-width: 1200px;     margin: 0 auto;     display: flex;     justify-content: center;     align-items: center;     padding: 1rem 0; 
+} 
+ 
+.course-card {     background-color: var(--surface-card);     border: 1px solid var(--border-line);     border-radius: 16px;     width: 100%;     max-width: 420px;     overflow: hidden;     box-shadow: var(--shadow-card);     transition: var(--transition-smooth); 
+} 
+ 
+.course-card:hover {     transform: translateY(-6px);     box-shadow: var(--shadow-hover);     border-color: var(--suza-gold); 
+} 
+ 
+.course-image-wrapper { 
+   position: relative;     width: 100%;     height: 220px;     background-color: var(--suza-navy);     overflow: hidden; 
+} 
+ 
+.course-thumbnail {     width: 100%;     height: 100%;     object-fit: cover;     display: block;     transition: var(--transition-smooth); 
+} 
+ 
+.course-card:hover .course-thumbnail {     transform: scale(1.04); 
+} 
+ 
+/* Semester Floating Badge */.course-badge {     position: absolute;     top: 1rem;     right: 1rem;     background-color: var(--suza-navy); 
+    color: #ffffff; 
+    padding: 0.25rem 0.75rem;     font-size: 0.75rem; font-weight: 700; border-radius: 50px; border: 1px solid var(--suza-gold); 
+}
+ 
+.course-content {     padding: 1.75rem; 
+} 
+ 
+.course-meta { 
+    display: flex;     justify-content: space-between;     align-items: center;     margin-bottom: 0.75rem; 
+} 
+ 
+.course-code {     background-color: rgba(217, 119, 6, 0.1);     color: var(--suza-gold);     font-weight: 700;     font-size: 0.85rem;     padding: 0.2rem 0.6rem;     border-radius: 6px; 
+} 
+ 
+.course-credits {    color: var(--text-muted);    font-size: 0.85rem; font-weight: 600; 
+}
+ 
+.course-title {     font-size: 1.4rem;     font-weight: 700;     line-height: 1.3;     color: var(--suza-navy);     margin-bottom: 0.5rem; 
+} 
+ 
+.lecturer-info {     font-size: 0.9rem;     color: var(--text-dark);     margin-bottom: 1rem; 
+} 
+ 
+.lecturer-info strong {     color: var(--suza-gold); 
+} 
+ 
+.course-description {     color: var(--text-muted);     font-size: 0.925rem;     margin-bottom: 1.75rem; 
+} 
+ 
+.course-actions { display: flex; align-items: center; justify-content: space-between;    gap: 1rem;     border-top: 1px solid var(--border-line);     padding-top: 1.25rem; 
+} 
+ 
+.link-external {     color: var(--text-muted);     text-decoration: none;     font-size: 0.9rem;     font-weight: 600;     transition: var(--transition-smooth); 
+} 
+ 
+.link-external:hover {     color: var(--suza-gold);     text-decoration: underline; 
+} 
+ 
+.btn-outline {     background-color: var(--suza-gold); 
+    color: #ffffff;     text-decoration: none;     font-size: 0.85rem;    font-weight: 700;    padding: 0.6rem 1.2rem; border-radius: 8px; transition: var(--transition-smooth); border: 1px solid transparent; 
+}
+ 
+/ 
+.btn-outline:hover {     background-color: var(--suza-gold-hover);     box-shadow: 0 4px 10px rgba(217, 119, 6, 0.3); 
+} 
+ 
+/* Institutional Footer styling */ 
+.site-footer {     text-align: center;     margin-top: 5rem;     padding-top: 2rem;     border-top: 1px solid var(--border-line);     color: var(--text-muted);     font-size: 0.85rem; 
+} 
+ 
+.student-credentials {     margin-top: 0.5rem;     font-weight: 700;     color: var(--suza-navy); 
+} 
+ 
+@media (max-width: 400px) { body { 
+    padding: 1rem 0.5rem; 
+} 
+    .catalogue-header h1 {         font-size: 1.75rem; 
+    } 
+ 
+    .course-content {         padding: 1.25rem; 
+    } 
+ 
+    .course-title {         font-size: 1.25rem; 
+    } 
+ 
+    .course-actions {         flex-direction: column;          gap: 0.75rem;         align-items: flex-start; 
+    } 
+ 
+    .btn-outline {         width: 100%;         text-align: center; 
+    } 
+}
+ 
+ 
+ 
+ 
